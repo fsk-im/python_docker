@@ -1,0 +1,7 @@
+services:
+  app:
+    image: "python:3-alpine"
+    volumes:
+      - ./codebase:/codebase
+    command: python /codebase/app.py
+    env_file: ./.env
