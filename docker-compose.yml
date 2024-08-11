@@ -5,3 +5,9 @@ services:
       - ./codebase:/codebase
     command: python /codebase/app.py
     env_file: ./.env
+    secrets:
+      - TOKEN
+
+secrets:
+  TOKEN:
+    file: ./TOKEN.txt
